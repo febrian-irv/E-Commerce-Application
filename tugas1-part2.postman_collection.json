@@ -1,0 +1,3163 @@
+{
+	"info": {
+		"_postman_id": "66cf98f2-6373-4b5f-baac-3ceeb328d3b1",
+		"name": "tugas1-sple-FebrianIrvansyah",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29700440"
+	},
+	"item": [
+		{
+			"name": "auth-controller",
+			"item": [
+				{
+					"name": "user-login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"public0@gmail.com\",\n  \"password\": \"public0-password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"login"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user-login-admin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"admin0@gmail.com\",\n  \"password\": \"admin0-password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"login"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register-useradmin0",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\n    \"userId\": 0,\n    \"firstName\": \"adminzero\",\n    \"lastName\": \"adminzero\",\n    \"mobileNumber\": 8123456780,\n    \"email\": \"admin0@gmail.com\",\n    \"password\": \"admin0-password\",\n    \"roles\": [\n      {\n        \"roleId\": 101,\n        \"roleName\": \"ADMIN\"\n      }\n    ],\n    \"address\": {\n      \"street\": \"Main Street\",\n      \"buildingName\": \"HQ Tower\",\n      \"city\": \"Jakarta\",\n      \"state\": \"DKI Jakarta\",\n      \"country\": \"Indonesia\",\n      \"pincode\": \"101100\"\n    }\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register-useradmin1",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\n    \"userId\": 1,\n    \"firstName\": \"adminone\",\n    \"lastName\": \"adminone\",\n    \"mobileNumber\": 8123456781,\n    \"email\": \"admin1@gmail.com\",\n    \"password\": \"admin1-password\",\n    \"roles\": [\n      {\n        \"roleId\": 101,\n        \"roleName\": \"ADMIN\"\n      }\n    ],\n    \"address\": {\n      \"street\": \"First Street\",\n      \"buildingName\": \"Alpha Tower\",\n      \"city\": \"Jakarta\",\n      \"state\": \"DKI Jakarta\",\n      \"country\": \"Indonesia\",\n      \"pincode\": \"101101\"\n    }\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register-useradmin2",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\n    \"userId\": 2,\n    \"firstName\": \"admintwo\",\n    \"lastName\": \"admintwo\",\n    \"mobileNumber\": 8123456782,\n    \"email\": \"admin2@gmail.com\",\n    \"password\": \"admin2-password\",\n    \"roles\": [\n      {\n        \"roleId\": 101,\n        \"roleName\": \"ADMIN\"\n      }\n    ],\n    \"address\": {\n      \"street\": \"Second Avenue\",\n      \"buildingName\": \"Beta Residency\",\n      \"city\": \"Bandung\",\n      \"state\": \"West Java\",\n      \"country\": \"Indonesia\",\n      \"pincode\": \"401123\"\n    }\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register-useradmin3",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\n    \"userId\": 3,\n    \"firstName\": \"adminthree\",\n    \"lastName\": \"adminthree\",\n    \"mobileNumber\": 8123456783,\n    \"email\": \"admin3@gmail.com\",\n    \"password\": \"admin3-password\",\n    \"roles\": [\n      {\n        \"roleId\": 101,\n        \"roleName\": \"ADMIN\"\n      }\n    ],\n    \"address\": {\n      \"street\": \"Third Street\",\n      \"buildingName\": \"Gamma Plaza\",\n      \"city\": \"Surabaya\",\n      \"state\": \"East Java\",\n      \"country\": \"Indonesia\",\n      \"pincode\": \"602930\"\n    }\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register-useradmin4",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\n    \"userId\": 4,\n    \"firstName\": \"adminfour\",\n    \"lastName\": \"adminfour\",\n    \"mobileNumber\": 8123456784,\n    \"email\": \"admin4@gmail.com\",\n    \"password\": \"admin4-password\",\n    \"roles\": [\n      {\n        \"roleId\": 101,\n        \"roleName\": \"ADMIN\"\n      }\n    ],\n    \"address\": {\n      \"street\": \"Fourth Boulevard\",\n      \"buildingName\": \"Delta Tower\",\n      \"city\": \"Medan\",\n      \"state\": \"North Sumatra\",\n      \"country\": \"Indonesia\",\n      \"pincode\": \"201570\"\n    }\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register-useradmin5",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\n    \"userId\": 5,\n    \"firstName\": \"adminfive\",\n    \"lastName\": \"adminfive\",\n    \"mobileNumber\": 8123456785,\n    \"email\": \"admin5@gmail.com\",\n    \"password\": \"admin5-password\",\n    \"roles\": [\n      {\n        \"roleId\": 101,\n        \"roleName\": \"ADMIN\"\n      }\n    ],\n    \"address\": {\n      \"street\": \"Fifth Avenue\",\n      \"buildingName\": \"Epsilon Heights\",\n      \"city\": \"Yogyakarta\",\n      \"state\": \"Yogyakarta\",\n      \"country\": \"Indonesia\",\n      \"pincode\": \"551220\"\n    }\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register-useradmin6",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\n    \"userId\": 6,\n    \"firstName\": \"adminsix\",\n    \"lastName\": \"adminsix\",\n    \"mobileNumber\": 8123456786,\n    \"email\": \"admin6@gmail.com\",\n    \"password\": \"admin6-password\",\n    \"roles\": [\n      {\n        \"roleId\": 101,\n        \"roleName\": \"ADMIN\"\n      }\n    ],\n    \"address\": {\n      \"street\": \"Sixth Road\",\n      \"buildingName\": \"Zeta Complex\",\n      \"city\": \"Denpasar\",\n      \"state\": \"Bali\",\n      \"country\": \"Indonesia\",\n      \"pincode\": \"802320\"\n    }\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register-useradmin7",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\n    \"userId\": 7,\n    \"firstName\": \"adminseven\",\n    \"lastName\": \"adminseven\",\n    \"mobileNumber\": 8123456787,\n    \"email\": \"admin7@gmail.com\",\n    \"password\": \"admin7-password\",\n    \"roles\": [\n      {\n        \"roleId\": 101,\n        \"roleName\": \"ADMIN\"\n      }\n    ],\n    \"address\": {\n      \"street\": \"Seventh Street\",\n      \"buildingName\": \"Eta Residency\",\n      \"city\": \"Makassar\",\n      \"state\": \"South Sulawesi\",\n      \"country\": \"Indonesia\",\n      \"pincode\": \"901110\"\n    }\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register-useradmin8",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\n    \"userId\": 8,\n    \"firstName\": \"admineight\",\n    \"lastName\": \"admineight\",\n    \"mobileNumber\": 8123456788,\n    \"email\": \"admin8@gmail.com\",\n    \"password\": \"admin8-password\",\n    \"roles\": [\n      {\n        \"roleId\": 101,\n        \"roleName\": \"ADMIN\"\n      }\n    ],\n    \"address\": {\n      \"street\": \"Eighth Lane\",\n      \"buildingName\": \"Theta Tower\",\n      \"city\": \"Padang\",\n      \"state\": \"West Sumatra\",\n      \"country\": \"Indonesia\",\n      \"pincode\": \"251330\"\n    }\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register-useradmin9",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\n    \"userId\": 9,\n    \"firstName\": \"adminnine\",\n    \"lastName\": \"adminnine\",\n    \"mobileNumber\": 8123456789,\n    \"email\": \"admin9@gmail.com\",\n    \"password\": \"admin9-password\",\n    \"roles\": [\n      {\n        \"roleId\": 101,\n        \"roleName\": \"ADMIN\"\n      }\n    ],\n    \"address\": {\n      \"street\": \"First Street\",\n      \"buildingName\": \"Alpha Tower\",\n      \"city\": \"Jakarta\",\n      \"state\": \"DKI Jakarta\",\n      \"country\": \"Indonesia\",\n      \"pincode\": \"101101\"\n    }\n  }\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register-userpublic0",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\": 0,\n  \"firstName\": \"publiczero\",\n  \"lastName\": \"publiczero\",\n  \"mobileNumber\": 8123456789,\n  \"email\": \"public0@gmail.com\",\n  \"password\": \"public0-password\",\n  \"roles\": [\n    {\n      \"roleId\": 102,\n      \"roleName\": \"USER\"\n    }\n  ],\n  \"address\": {\n    \"street\": \"string\",\n    \"buildingName\": \"string\",\n    \"city\": \"string\",\n    \"state\": \"string\",\n    \"country\": \"string\",\n    \"pincode\": \"string\"\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register-userpublic1",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\": 1,\n    \"firstName\": \"publicone\",\n    \"lastName\": \"publicone\",\n    \"mobileNumber\": 8123456781,\n    \"email\": \"public1@gmail.com\",\n    \"password\": \"public1-password\",\n    \"roles\": [\n      {\n        \"roleId\": 102,\n        \"roleName\": \"USER\"\n      }\n    ],\n    \"address\": {\n      \"street\": \"First Street\",\n      \"buildingName\": \"Alpha Tower\",\n      \"city\": \"Jakarta\",\n      \"state\": \"DKI Jakarta\",\n      \"country\": \"Indonesia\",\n      \"pincode\": \"101101\"\n    }\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register-userpublic2",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\": 2,\n    \"firstName\": \"publictwo\",\n    \"lastName\": \"publictwo\",\n    \"mobileNumber\": 8123456782,\n    \"email\": \"public2@gmail.com\",\n    \"password\": \"public2-password\",\n    \"roles\": [\n      {\n        \"roleId\": 102,\n        \"roleName\": \"USER\"\n      }\n    ],\n    \"address\": {\n      \"street\": \"Second Avenue\",\n      \"buildingName\": \"Beta Residency\",\n      \"city\": \"Bandung\",\n      \"state\": \"West Java\",\n      \"country\": \"Indonesia\",\n      \"pincode\": \"401231\"\n    }\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register-userpublic3",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\": 3,\n    \"firstName\": \"publicthree\",\n    \"lastName\": \"publicthree\",\n    \"mobileNumber\": 8123456783,\n    \"email\": \"public3@gmail.com\",\n    \"password\": \"public3-password\",\n    \"roles\": [\n      {\n        \"roleId\": 102,\n        \"roleName\": \"USER\"\n      }\n    ],\n    \"address\": {\n      \"street\": \"Third Street\",\n      \"buildingName\": \"Gamma Plaza\",\n      \"city\": \"Surabaya\",\n      \"state\": \"East Java\",\n      \"country\": \"Indonesia\",\n      \"pincode\": \"602931\"\n    }\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register-userpublic4",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\": 4,\n    \"firstName\": \"publicfour\",\n    \"lastName\": \"publicfour\",\n    \"mobileNumber\": 8123456784,\n    \"email\": \"public4@gmail.com\",\n    \"password\": \"public4-password\",\n    \"roles\": [\n      {\n        \"roleId\": 102,\n        \"roleName\": \"USER\"\n      }\n    ],\n    \"address\": {\n      \"street\": \"Fourth Boulevard\",\n      \"buildingName\": \"Delta Tower\",\n      \"city\": \"Medan\",\n      \"state\": \"North Sumatra\",\n      \"country\": \"Indonesia\",\n      \"pincode\": \"201571\"\n    }\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register-userpublic5",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\": 5,\n    \"firstName\": \"publicfive\",\n    \"lastName\": \"publicfive\",\n    \"mobileNumber\": 8123456785,\n    \"email\": \"public5@gmail.com\",\n    \"password\": \"public5-password\",\n    \"roles\": [\n      {\n        \"roleId\": 102,\n        \"roleName\": \"USER\"\n      }\n    ],\n    \"address\": {\n      \"street\": \"Fifth Avenue\",\n      \"buildingName\": \"Epsilon Heights\",\n      \"city\": \"Yogyakarta\",\n      \"state\": \"Yogyakarta\",\n      \"country\": \"Indonesia\",\n      \"pincode\": \"551221\"\n    }\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register-userpublic6",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\": 6,\n    \"firstName\": \"publicsix\",\n    \"lastName\": \"publicsix\",\n    \"mobileNumber\": 8123456786,\n    \"email\": \"public6@gmail.com\",\n    \"password\": \"public6-password\",\n    \"roles\": [\n      {\n        \"roleId\": 102,\n        \"roleName\": \"USER\"\n      }\n    ],\n    \"address\": {\n      \"street\": \"Sixth Road\",\n      \"buildingName\": \"Zeta Complex\",\n      \"city\": \"Denpasar\",\n      \"state\": \"Bali\",\n      \"country\": \"Indonesia\",\n      \"pincode\": \"802321\"\n    }\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register-userpublic7",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\": 7,\n    \"firstName\": \"publicseven\",\n    \"lastName\": \"publicseven\",\n    \"mobileNumber\": 8123456787,\n    \"email\": \"public7@gmail.com\",\n    \"password\": \"public7-password\",\n    \"roles\": [\n      {\n        \"roleId\": 102,\n        \"roleName\": \"USER\"\n      }\n    ],\n    \"address\": {\n      \"street\": \"Seventh Street\",\n      \"buildingName\": \"Eta Residency\",\n      \"city\": \"Makassar\",\n      \"state\": \"South Sulawesi\",\n      \"country\": \"Indonesia\",\n      \"pincode\": \"901111\"\n    }\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register-userpublic8",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\": 8,\n    \"firstName\": \"publiceight\",\n    \"lastName\": \"publiceight\",\n    \"mobileNumber\": 8123456788,\n    \"email\": \"public8@gmail.com\",\n    \"password\": \"public8-password\",\n    \"roles\": [\n      {\n        \"roleId\": 102,\n        \"roleName\": \"USER\"\n      }\n    ],\n    \"address\": {\n      \"street\": \"Eighth Lane\",\n      \"buildingName\": \"Theta Tower\",\n      \"city\": \"Padang\",\n      \"state\": \"West Sumatra\",\n      \"country\": \"Indonesia\",\n      \"pincode\": \"251331\"\n    }\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register-userpublic9",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\": 9,\n    \"firstName\": \"publicnine\",\n    \"lastName\": \"publicnine\",\n    \"mobileNumber\": 8123456789,\n    \"email\": \"public9@gmail.com\",\n    \"password\": \"public9-password\",\n    \"roles\": [\n      {\n        \"roleId\": 102,\n        \"roleName\": \"USER\"\n      }\n    ],\n    \"address\": {\n      \"street\": \"First Street\",\n      \"buildingName\": \"Alpha Tower\",\n      \"city\": \"Jakarta\",\n      \"state\": \"DKI Jakarta\",\n      \"country\": \"Indonesia\",\n      \"pincode\": \"101101\"\n    }\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "address-controller",
+			"item": [
+				{
+					"name": "post-address0",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxODQzNDMsImVtYWlsIjoiYWRtaW4wQGdtYWlsLmNvbSJ9.Mq9Gi2h1XQbtNkNriaBOAIL7wEOzTyEx-W9Aoqy5sok",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\n    \"street\": \"Jalan Sudirman\",\n    \"buildingName\": \"Graha Mandiri\",\n    \"city\": \"Jakarta\",\n    \"state\": \"DKI Jakarta\",\n    \"country\": \"Indonesia\",\n    \"pincode\": \"A1B2C3\"\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/admin/address",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"address"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post-address1",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxODQzNDMsImVtYWlsIjoiYWRtaW4wQGdtYWlsLmNvbSJ9.Mq9Gi2h1XQbtNkNriaBOAIL7wEOzTyEx-W9Aoqy5sok",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\n    \"street\": \"Orchard Road\",\n    \"buildingName\": \"ION Orchard\",\n    \"city\": \"Singapore\",\n    \"state\": \"Central Region\",\n    \"country\": \"Singapore\",\n    \"pincode\": \"X9Y8Z7\"\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/admin/address",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"address"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post-address2",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxODQzNDMsImVtYWlsIjoiYWRtaW4wQGdtYWlsLmNvbSJ9.Mq9Gi2h1XQbtNkNriaBOAIL7wEOzTyEx-W9Aoqy5sok",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\n    \"street\": \"5th Avenue\",\n    \"buildingName\": \"Empire State Building\",\n    \"city\": \"New York\",\n    \"state\": \"New York\",\n    \"country\": \"USA\",\n    \"pincode\": \"P5Q6R7\"\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/admin/address",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"address"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post-address3",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxOTI4MDksImVtYWlsIjoiYWRtaW44QGdtYWlsLmNvbSJ9.Ur8Z0kmryo2iFLXjlm0yY3o5aHPC6jt1JnoO_OPJ9fg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\n    \"street\": \"Bandra Kurla Complex\",\n    \"buildingName\": \"One BKC\",\n    \"city\": \"Mumbai\",\n    \"state\": \"Maharashtra\",\n    \"country\": \"India\",\n    \"pincode\": \"M3N2O1\"\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/admin/address",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"address"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post-address4",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxODQzNDMsImVtYWlsIjoiYWRtaW4wQGdtYWlsLmNvbSJ9.Mq9Gi2h1XQbtNkNriaBOAIL7wEOzTyEx-W9Aoqy5sok",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\n    \"street\": \"Pitt Street\",\n    \"buildingName\": \"Westfield Sydney\",\n    \"city\": \"Sydney\",\n    \"state\": \"New South Wales\",\n    \"country\": \"Australia\",\n    \"pincode\": \"Z4X5Y6\"\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/admin/address",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"address"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post-address5",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxODQzNDMsImVtYWlsIjoiYWRtaW4wQGdtYWlsLmNvbSJ9.Mq9Gi2h1XQbtNkNriaBOAIL7wEOzTyEx-W9Aoqy5sok",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\n    \"street\": \"Unter den Linden\",\n    \"buildingName\": \"Adlon Kempinski\",\n    \"city\": \"Berlin\",\n    \"state\": \"Berlin\",\n    \"country\": \"Germany\",\n    \"pincode\": \"G1H2J3\"\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/admin/address",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"address"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post-address6",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxODQzNDMsImVtYWlsIjoiYWRtaW4wQGdtYWlsLmNvbSJ9.Mq9Gi2h1XQbtNkNriaBOAIL7wEOzTyEx-W9Aoqy5sok",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\n    \"street\": \"Avenue des Champs-Élysées\",\n    \"buildingName\": \"Louis Vuitton Paris\",\n    \"city\": \"Paris\",\n    \"state\": \"Île-de-France\",\n    \"country\": \"France\",\n    \"pincode\": \"K4L5M6\"\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/admin/address",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"address"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post-address7",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxOTI2NTQsImVtYWlsIjoiYWRtaW44QGdtYWlsLmNvbSJ9.ciTdKtHHkkIQqJRlOhqVQZB8o1t21tJ5LQx0KUoyYek",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\n    \"street\": \"Via Monte Napoleone\",\n    \"buildingName\": \"Armani Hotel\",\n    \"city\": \"Milan\",\n    \"state\": \"Lombardy\",\n    \"country\": \"Italy\",\n    \"pincode\": \"N7O8P9\"\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/admin/address",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"address"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post-address8",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxODQzNDMsImVtYWlsIjoiYWRtaW4wQGdtYWlsLmNvbSJ9.Mq9Gi2h1XQbtNkNriaBOAIL7wEOzTyEx-W9Aoqy5sok",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\n    \"street\": \"Nanjing Road\",\n    \"buildingName\": \"Shanghai Tower\",\n    \"city\": \"Shanghai\",\n    \"state\": \"Shanghai\",\n    \"country\": \"China\",\n    \"pincode\": \"Q2R3S4\"\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/admin/address",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"address"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post-address9",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxODQzNDMsImVtYWlsIjoiYWRtaW4wQGdtYWlsLmNvbSJ9.Mq9Gi2h1XQbtNkNriaBOAIL7wEOzTyEx-W9Aoqy5sok",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\n    \"street\": \"Ginza\",\n    \"buildingName\": \"Ginza Six\",\n    \"city\": \"Tokyo\",\n    \"state\": \"Tokyo\",\n    \"country\": \"Japan\",\n    \"pincode\": \"T5U6V7\"\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/admin/address",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"address"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-admin-addresses",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxOTI2NTQsImVtYWlsIjoiYWRtaW44QGdtYWlsLmNvbSJ9.ciTdKtHHkkIQqJRlOhqVQZB8o1t21tJ5LQx0KUoyYek",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer yJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxOTI2NTQsImVtYWlsIjoiYWRtaW44QGdtYWlsLmNvbSJ9.ciTdKtHHkkIQqJRlOhqVQZB8o1t21tJ5LQx0KUoyYekc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxOTA3OTIsImVtYWlsIjoiYWRtaW4yQGdtYWlsLmNvbSJ9.JOs7wQNcpPfvRsWqY_9m2GpmtZ8cmiGyTsBy3nESWv4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/admin/addresses",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"addresses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-admin-addressid",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxOTI2NTQsImVtYWlsIjoiYWRtaW44QGdtYWlsLmNvbSJ9.ciTdKtHHkkIQqJRlOhqVQZB8o1t21tJ5LQx0KUoyYek",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxOTI2NTQsImVtYWlsIjoiYWRtaW44QGdtYWlsLmNvbSJ9.ciTdKtHHkkIQqJRlOhqVQZB8o1t21tJ5LQx0KUoyYekXIiLCJpYXQiOjE3MzkxOTEwMTksImVtYWlsIjoiYWRtaW4yQGdtYWlsLmNvbSJ9.bHvHC4hk948rT_1Mhe2uZGKJ_96gm-LuwSstIHsG4Ik",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/admin/addresses/25",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"addresses",
+								"25"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "put-admin-addressid",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxOTEwMTksImVtYWlsIjoiYWRtaW4yQGdtYWlsLmNvbSJ9.bHvHC4hk948rT_1Mhe2uZGKJ_96gm-LuwSstIHsG4Ik",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/admin/address/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"address",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-admin-addressid",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxOTEwMTksImVtYWlsIjoiYWRtaW4yQGdtYWlsLmNvbSJ9.bHvHC4hk948rT_1Mhe2uZGKJ_96gm-LuwSstIHsG4Ik",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/admin/address/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"address",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "category-controller",
+			"item": [
+				{
+					"name": "post-category0",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3Mzk1MjQwNzksImVtYWlsIjoiYWRtaW4wQGdtYWlsLmNvbSJ9.KnyYDmjNt2kwYjfCXaCkQ0ZQhtQ1QR0j3awOavg7TMs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"categoryName\": \"Kesehatan\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/admin/category",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post-category1",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxODQzNDMsImVtYWlsIjoiYWRtaW4wQGdtYWlsLmNvbSJ9.Mq9Gi2h1XQbtNkNriaBOAIL7wEOzTyEx-W9Aoqy5sok",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\n    \"categoryName\": \"Elektronik\"\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/admin/category",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post-category2",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3Mzk1MjMxNzksImVtYWlsIjoiYWRtaW4wQGdtYWlsLmNvbSJ9.ZgjLV11bDtEQeTlah4yI-RXzbBt0IVKZw0F9EwEJo4U",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\n    \"categoryName\": \"Fashion\"\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/admin/category",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post-category3",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxODQzNDMsImVtYWlsIjoiYWRtaW4wQGdtYWlsLmNvbSJ9.Mq9Gi2h1XQbtNkNriaBOAIL7wEOzTyEx-W9Aoqy5sok",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\n    \"categoryName\": \"Makanan & Minuman\"\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/admin/category",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post-category4",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxODQzNDMsImVtYWlsIjoiYWRtaW4wQGdtYWlsLmNvbSJ9.Mq9Gi2h1XQbtNkNriaBOAIL7wEOzTyEx-W9Aoqy5sok",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\n    \"categoryName\": \"Peralatan Rumah Tangga\"\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/admin/category",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post-category5",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxODQzNDMsImVtYWlsIjoiYWRtaW4wQGdtYWlsLmNvbSJ9.Mq9Gi2h1XQbtNkNriaBOAIL7wEOzTyEx-W9Aoqy5sok",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\n    \"categoryName\": \"Hobi & Koleksi\"\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/admin/category",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post-category6",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxODQzNDMsImVtYWlsIjoiYWRtaW4wQGdtYWlsLmNvbSJ9.Mq9Gi2h1XQbtNkNriaBOAIL7wEOzTyEx-W9Aoqy5sokeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxOTI2NTQsImVtYWlsIjoiYWRtaW44QGdtYWlsLmNvbSJ9.ciTdKtHHkkIQqJRlOhqVQZB8o1t21tJ5LQx0KUoyYekeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxOTI4MDksImVtYWlsIjoiYWRtaW44QGdtYWlsLmNvbSJ9.Ur8Z0kmryo2iFLXjlm0yY3o5aHPC6jt1JnoO_OPJ9fg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\n    \"categoryName\": \"Kecantikan\"\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/admin/category",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post-category7",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxODQzNDMsImVtYWlsIjoiYWRtaW4wQGdtYWlsLmNvbSJ9.Mq9Gi2h1XQbtNkNriaBOAIL7wEOzTyEx-W9Aoqy5sok",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\n    \"categoryName\": \"Buku & Alat Tulis\"\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/admin/category",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post-category8",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxOTI4MDksImVtYWlsIjoiYWRtaW44QGdtYWlsLmNvbSJ9.Ur8Z0kmryo2iFLXjlm0yY3o5aHPC6jt1JnoO_OPJ9fg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\n    \"categoryName\": \"Olahraga & Outdoor\"\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/admin/category",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post-category9",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxOTI4MDksImVtYWlsIjoiYWRtaW44QGdtYWlsLmNvbSJ9.Ur8Z0kmryo2iFLXjlm0yY3o5aHPC6jt1JnoO_OPJ9fg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\n    \"categoryName\": \"Otomotif\"\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/admin/category",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-category",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxOTIxNTUsImVtYWlsIjoiYWRtaW4yQGdtYWlsLmNvbSJ9.FNG6i4A-w0YhGP7Qn2_Crn9DiXwXuricu4PcnxKr8yA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/admin/categories/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"categories",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-categories",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxOTEzNzgsImVtYWlsIjoicHVibGljNEBnbWFpbC5jb20ifQ.-JH33dSs-FhNjdWonIE1HiE4jVNnhWvJKg1ZMr9nSaM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/public/categories?pageSize=5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"public",
+								"categories"
+							],
+							"query": [
+								{
+									"key": "pageSize",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "put-category",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkzNjMyOTQsImVtYWlsIjoiYWRtaW44QGdtYWlsLmNvbSJ9.rGsNbKZVfyTPK-OuT2J-2ksAD4bX8HahGu3bNk57FIA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"categoryName\": \"kategoricoba\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/admin/categories/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"categories",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "product-controller",
+			"item": [
+				{
+					"name": "post-product0",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3Mzk1MjQwNzksImVtYWlsIjoiYWRtaW4wQGdtYWlsLmNvbSJ9.KnyYDmjNt2kwYjfCXaCkQ0ZQhtQ1QR0j3awOavg7TMs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3Mzk1MTgyMDIsImVtYWlsIjoiYWRtaW4wQGdtYWlsLmNvbSJ9.d_pJ60Y5CAUsm5KGBuuB8fCihEJGNR7kZTTD-0E86woFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxODQzNDMsImVtYWlsIjoiYWRtaW4wQGdtYWlsLmNvbSJ9.Mq9Gi2h1XQbtNkNriaBOAIL7wEOzTyEx-W9Aoqy5sok",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\n    \"productName\": \"Wireless Bluetooth Headphones\",\n    \"brand\": \"sumsang\",\n    \"image\": \"https://example.com/images/headphones.jpg\",\n    \"description\": \"High-quality wireless headphones with noise cancellation and 20-hour battery life.\",\n    \"quantity\": 50,\n    \"price\": 129.99,\n    \"discount\": 15,\n    \"specialPrice\": 110.49\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/admin/categories/1/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"categories",
+								"1",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post-product1",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3Mzk1MjMxNzksImVtYWlsIjoiYWRtaW4wQGdtYWlsLmNvbSJ9.ZgjLV11bDtEQeTlah4yI-RXzbBt0IVKZw0F9EwEJo4U",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\n    \"productName\": \"Smartwatch Series 5\",\n    \"brand\": \"sumsang\",\n    \"image\": \"https://example.com/images/smartwatch.jpg\",\n    \"description\": \"Feature-packed smartwatch with heart rate monitoring and GPS tracking.\",\n    \"quantity\": 30,\n    \"price\": 199.99,\n    \"discount\": 10,\n    \"specialPrice\": 179.99\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/admin/categories/1/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"categories",
+								"1",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post-product2",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxODQzNDMsImVtYWlsIjoiYWRtaW4wQGdtYWlsLmNvbSJ9.Mq9Gi2h1XQbtNkNriaBOAIL7wEOzTyEx-W9Aoqy5sok",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\n    \"productName\": \"Gaming Mechanical Keyboard\",\n    \"image\": \"https://example.com/images/keyboard.jpg\",\n    \"description\": \"RGB backlit mechanical keyboard with responsive switches for gaming.\",\n    \"quantity\": 75,\n    \"price\": 89.99,\n    \"discount\": 20,\n    \"specialPrice\": 71.99\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/admin/categories/3/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"categories",
+								"3",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post-product3",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxODQzNDMsImVtYWlsIjoiYWRtaW4wQGdtYWlsLmNvbSJ9.Mq9Gi2h1XQbtNkNriaBOAIL7wEOzTyEx-W9Aoqy5sok",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\n    \"productName\": \"Wireless Bluetooth Headphones\",\n    \"image\": \"https://example.com/images/headphones.jpg\",\n    \"description\": \"High-quality wireless headphones with noise cancellation and 20-hour battery life.\",\n    \"quantity\": 50,\n    \"price\": 129.99,\n    \"discount\": 15,\n    \"specialPrice\": 110.49\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/admin/categories/4/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"categories",
+								"4",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post-product4",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxODQzNDMsImVtYWlsIjoiYWRtaW4wQGdtYWlsLmNvbSJ9.Mq9Gi2h1XQbtNkNriaBOAIL7wEOzTyEx-W9Aoqy5sok",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\n    \"productName\": \"4K Ultra HD Smart TV\",\n    \"image\": \"https://example.com/images/smarttv.jpg\",\n    \"description\": \"65-inch 4K Ultra HD Smart TV with built-in streaming apps.\",\n    \"quantity\": 15,\n    \"price\": 799.99,\n    \"discount\": 12,\n    \"specialPrice\": 703.99\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/admin/categories/5/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"categories",
+								"5",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post-product5",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxODQzNDMsImVtYWlsIjoiYWRtaW4wQGdtYWlsLmNvbSJ9.Mq9Gi2h1XQbtNkNriaBOAIL7wEOzTyEx-W9Aoqy5sok",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\n    \"productName\": \"Noise Cancelling Earbuds\",\n    \"image\": \"https://example.com/images/earbuds.jpg\",\n    \"description\": \"Compact and lightweight earbuds with active noise cancellation.\",\n    \"quantity\": 40,\n    \"price\": 149.99,\n    \"discount\": 18,\n    \"specialPrice\": 122.99\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/admin/categories/6/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"categories",
+								"6",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post-product6",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxOTI5ODEsImVtYWlsIjoiYWRtaW44QGdtYWlsLmNvbSJ9.U1Sf1P7xtOQBEfq7XtftPKADzADdnywNUmmww-X8K9g",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\n    \"productName\": \"Ergonomic Office Chair\",\n    \"image\": \"https://example.com/images/officechair.jpg\",\n    \"description\": \"Adjustable ergonomic office chair with lumbar support.\",\n    \"quantity\": 20,\n    \"price\": 229.99,\n    \"discount\": 15,\n    \"specialPrice\": 195.49\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/admin/categories/4/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"categories",
+								"4",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post-product7",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxOTI5ODEsImVtYWlsIjoiYWRtaW44QGdtYWlsLmNvbSJ9.U1Sf1P7xtOQBEfq7XtftPKADzADdnywNUmmww-X8K9g",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\n    \"productName\": \"Smart LED Light Bulb\",\n    \"image\": \"https://example.com/images/smartbulb.jpg\",\n    \"description\": \"WiFi-enabled smart bulb with adjustable brightness and color.\",\n    \"quantity\": 60,\n    \"price\": 24.99,\n    \"discount\": 5,\n    \"specialPrice\": 23.74\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/admin/categories/3/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"categories",
+								"3",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post-product8",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxODQzNDMsImVtYWlsIjoiYWRtaW4wQGdtYWlsLmNvbSJ9.Mq9Gi2h1XQbtNkNriaBOAIL7wEOzTyEx-W9Aoqy5sok",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\n    \"productName\": \"Electric Toothbrush\",\n    \"image\": \"https://example.com/images/toothbrush.jpg\",\n    \"description\": \"Rechargeable electric toothbrush with multiple cleaning modes.\",\n    \"quantity\": 35,\n    \"price\": 59.99,\n    \"discount\": 12,\n    \"specialPrice\": 52.79\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/admin/categories/9/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"categories",
+								"9",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post-product9",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxODQzNDMsImVtYWlsIjoiYWRtaW4wQGdtYWlsLmNvbSJ9.Mq9Gi2h1XQbtNkNriaBOAIL7wEOzTyEx-W9Aoqy5sok",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\n    \"productName\": \"Smartphone Gimbal Stabilizer\",\n    \"image\": \"https://example.com/images/gimbal.jpg\",\n    \"description\": \"3-axis gimbal stabilizer for smooth video recording on smartphones.\",\n    \"quantity\": 25,\n    \"price\": 129.99,\n    \"discount\": 10,\n    \"specialPrice\": 116.99\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/admin/categories/10/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"categories",
+								"10",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-public-products",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxOTEzNzgsImVtYWlsIjoicHVibGljNEBnbWFpbC5jb20ifQ.-JH33dSs-FhNjdWonIE1HiE4jVNnhWvJKg1ZMr9nSaM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/public/products?pageSize=5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"public",
+								"products"
+							],
+							"query": [
+								{
+									"key": "pageSize",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-product-from-category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxOTEzNzgsImVtYWlsIjoicHVibGljNEBnbWFpbC5jb20ifQ.-JH33dSs-FhNjdWonIE1HiE4jVNnhWvJKg1ZMr9nSaM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/public/categories/3/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"public",
+								"categories",
+								"3",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-product-from-keyword",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxOTEzNzgsImVtYWlsIjoicHVibGljNEBnbWFpbC5jb20ifQ.-JH33dSs-FhNjdWonIE1HiE4jVNnhWvJKg1ZMr9nSaM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/public/products/keyword/Chair",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"public",
+								"products",
+								"keyword",
+								"Chair"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit-product",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkzNjIzODcsImVtYWlsIjoiYWRtaW44QGdtYWlsLmNvbSJ9._KKbQptdm7wGGeHw8GyeIHfCuJIlJaptf5QjyJw322Q",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\n    \"productName\": \"Wireless Bluetooth Headphones\",\n    \"image\": \"https://example.com/images/headphones.jpg\",\n    \"description\": \"High-quality wireless headphones with noise cancellation and 20-hour battery life. edit\",\n    \"quantity\": 50,\n    \"price\": 129.99,\n    \"discount\": 15,\n    \"specialPrice\": 110.49\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/admin/products/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "product-image",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkzNjI4NTQsImVtYWlsIjoiYWRtaW44QGdtYWlsLmNvbSJ9.0VT06ISSCtBaHVDXYHkxlE8vCEbGoW5HFj_IsmXKCWM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkzNjI4NTQsImVtYWlsIjoiYWRtaW44QGdtYWlsLmNvbSJ9.0VT06ISSCtBaHVDXYHkxlE8vCEbGoW5HFj_IsmXKCWM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"image\": \"this is image url\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/admin/products/1/image",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"products",
+								"1",
+								"image"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkzNjI4NTQsImVtYWlsIjoiYWRtaW44QGdtYWlsLmNvbSJ9.0VT06ISSCtBaHVDXYHkxlE8vCEbGoW5HFj_IsmXKCWM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkzNjI4NTQsImVtYWlsIjoiYWRtaW44QGdtYWlsLmNvbSJ9.0VT06ISSCtBaHVDXYHkxlE8vCEbGoW5HFj_IsmXKCWM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/admin/products/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"products",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-filter-brand",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3Mzk1MTg2MTYsImVtYWlsIjoicHVibGljMEBnbWFpbC5jb20ifQ.mCwXD2JubDoyQ_qBOobpeBOA-HFOgPtisTgi7-7oW0A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3Mzk1MjQxOTcsImVtYWlsIjoicHVibGljMEBnbWFpbC5jb20ifQ.He_nf5smF5FFMGcHHc1A6KT8BYPUnWnjmkHRsZE0PxY",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/public/products/brand/sumsang",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"public",
+								"products",
+								"brand",
+								"sumsang"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "cart-controller",
+			"item": [
+				{
+					"name": "post-product-to-cart0",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3Mzk1MjQxOTcsImVtYWlsIjoicHVibGljMEBnbWFpbC5jb20ifQ.He_nf5smF5FFMGcHHc1A6KT8BYPUnWnjmkHRsZE0PxY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3Mzk1MjQxOTcsImVtYWlsIjoicHVibGljMEBnbWFpbC5jb20ifQ.He_nf5smF5FFMGcHHc1A6KT8BYPUnWnjmkHRsZE0PxY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/public/carts/1/products/1/quantity/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"public",
+								"carts",
+								"1",
+								"products",
+								"1",
+								"quantity",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-admin-allcart",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3Mzk1NDMwODUsImVtYWlsIjoiYWRtaW4wQGdtYWlsLmNvbSJ9.Rq8py9Za4rqxEpTaUZ_PZUTo9PLNUp0FQikSQXScez4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/admin/carts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"carts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-product-from-cart",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxOTEzNzgsImVtYWlsIjoicHVibGljNEBnbWFpbC5jb20ifQ.-JH33dSs-FhNjdWonIE1HiE4jVNnhWvJKg1ZMr9nSaM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/public/carts/15/product/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"public",
+								"carts",
+								"15",
+								"product",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-public-carts",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxOTMxMTAsImVtYWlsIjoicHVibGljNEBnbWFpbC5jb20ifQ.O8_CbjjTFGPs2TSYyQA55KWQa3KAYvyRHbiELZ6En_Y",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/public/users/public4@gmail.com/carts/13",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"public",
+								"users",
+								"public4@gmail.com",
+								"carts",
+								"13"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "put-cart-quantity",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkzNjM2MjcsImVtYWlsIjoicHVibGljNEBnbWFpbC5jb20ifQ.tC41wNaczf3x9WtNUpqia-5F-n5ab10sDI--ZmX2pr0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/public/carts/15/products/2/quantity/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"public",
+								"carts",
+								"15",
+								"products",
+								"2",
+								"quantity",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "order-controller",
+			"item": [
+				{
+					"name": "post-orderpayment0",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3Mzk1NDM5NDAsImVtYWlsIjoicHVibGljMEBnbWFpbC5jb20ifQ.iMLRqXM21S75F2R5Apn1W1RHxGreXjlgyiioPtej6M8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3Mzk1NDM5NDAsImVtYWlsIjoicHVibGljMEBnbWFpbC5jb20ifQ.iMLRqXM21S75F2R5Apn1W1RHxGreXjlgyiioPtej6M8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/public/users/public0@gmail.com/carts/1/payments/cash/order",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"public",
+								"users",
+								"public0@gmail.com",
+								"carts",
+								"1",
+								"payments",
+								"cash",
+								"order"
+							],
+							"query": [
+								{
+									"key": "coupon",
+									"value": "PbXde",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-public-orders",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxOTA2NjEsImVtYWlsIjoicHVibGljNEBnbWFpbC5jb20ifQ.kwp5bTMlzzoc1KUlW_pONeXE1JNImyLhdpSdE5cpIJ4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/users/public4@gmail.com/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"users",
+								"public4@gmail.com",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "put-admin-order",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxOTM1MDEsImVtYWlsIjoiYWRtaW44QGdtYWlsLmNvbSJ9.GInExGngCshd93Q6L2SQaqiRYMqoCYjSOs0pRME6uAQIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxOTM1MDEsImVtYWlsIjoiYWRtaW44QGdtYWlsLmNvbSJ9.GInExGngCshd93Q6L2SQaqiRYMqoCYjSOs0pRME6uAQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/admin/users/public4@gmail.com/orders/1/orderStatus/Accepted",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"users",
+								"public4@gmail.com",
+								"orders",
+								"1",
+								"orderStatus",
+								"Accepted"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-admin-orders",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxOTM1MDEsImVtYWlsIjoiYWRtaW44QGdtYWlsLmNvbSJ9.GInExGngCshd93Q6L2SQaqiRYMqoCYjSOs0pRME6uAQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/admin/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-public-orderid",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkzNjMxNTgsImVtYWlsIjoicHVibGljNEBnbWFpbC5jb20ifQ.VRCYJV_yaTYTrH7IyINZ7UDsYIvnuWb1maJW_LgrARQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/public/users/public4@gmail.com/orders/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"public",
+								"users",
+								"public4@gmail.com",
+								"orders",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user-controller",
+			"item": [
+				{
+					"name": "get-users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxOTI0OTIsImVtYWlsIjoiYWRtaW44QGdtYWlsLmNvbSJ9.bUd2nlE5wXvpG3CxwnZJdjVC-GiYK2R0Ke34rWuCWHA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/admin/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-userid",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkxOTEzNzgsImVtYWlsIjoicHVibGljNEBnbWFpbC5jb20ifQ.-JH33dSs-FhNjdWonIE1HiE4jVNnhWvJKg1ZMr9nSaM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/public/users/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"public",
+								"users",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-user",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkzNjE5NTUsImVtYWlsIjoiYWRtaW44QGdtYWlsLmNvbSJ9.wSBnpuizHdY2FgLLIzOma3H1XwkHu5pCl74iJMNwIwg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/admin/users/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"users",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit-user",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkzNjIwNjcsImVtYWlsIjoicHVibGljNEBnbWFpbC5jb20ifQ.LtLiCAshOIqrSMFijXeYPKfEUJPY0dhPkMMOfJTbMU8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\": 4,\n    \"firstName\": \"publicfour\",\n    \"lastName\": \"publicfouredit\",\n    \"mobileNumber\": 8123456784,\n    \"email\": \"public4@gmail.com\",\n    \"password\": \"public4-password\",\n    \"roles\": [\n      {\n        \"roleId\": 102,\n        \"roleName\": \"USER\"\n      }\n    ],\n    \"address\": {\n      \"street\": \"Fourth Boulevard\",\n      \"buildingName\": \"Delta Tower\",\n      \"city\": \"Medan\",\n      \"state\": \"North Sumatra\",\n      \"country\": \"Indonesia\",\n      \"pincode\": \"201571\"\n    }\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/public/users/15",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"public",
+								"users",
+								"15"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "coupon-controller",
+			"item": [
+				{
+					"name": "post-create-coupon",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3Mzk1NDMwODUsImVtYWlsIjoiYWRtaW4wQGdtYWlsLmNvbSJ9.Rq8py9Za4rqxEpTaUZ_PZUTo9PLNUp0FQikSQXScez4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"discount\": 100\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/admin/coupon",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"coupon"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-coupons",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3Mzk1NDk1MTEsImVtYWlsIjoiYWRtaW4wQGdtYWlsLmNvbSJ9.IH6gpPPBV5u-XeHdl3A8VGDhH1FTQkErKfHRqNTXh_0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/admin/coupons",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"coupons"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "put-coupon",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3Mzk1NDk1MTEsImVtYWlsIjoiYWRtaW4wQGdtYWlsLmNvbSJ9.IH6gpPPBV5u-XeHdl3A8VGDhH1FTQkErKfHRqNTXh_0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/admin/coupons/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"coupons",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
