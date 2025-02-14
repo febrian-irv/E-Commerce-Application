@@ -29,7 +29,7 @@ public class Order {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long orderId;
-	
+
 	@Email
 	@Column(nullable = false)
 	private String email;
@@ -38,20 +38,11 @@ public class Order {
 	private List<OrderItem> orderItems = new ArrayList<>();
 
 	private LocalDate orderDate;
-	
+
 	@OneToOne
 	@JoinColumn(name = "payment_id")
 	private Payment payment;
-	
+
 	private Double totalAmount;
 	private String orderStatus;
-
-	public void applyCoupon(Coupon coupon) {
-		
-
-		if (coupon != null && coupon.isValid()) {
-			double discount = coupon.getDiscount();
-			this.totalAmount -= this.totalAmount * discount / 100;
-		}
-	}
 }

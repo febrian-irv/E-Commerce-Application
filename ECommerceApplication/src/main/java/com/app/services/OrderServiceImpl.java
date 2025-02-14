@@ -73,82 +73,81 @@ public class OrderServiceImpl implements OrderService {
 	public OrderDTO placeOrder(String email, Long cartId, String paymentMethod, String couponCode) {
 
 		Cart cart = cartRepo.findCartByEmailAndCartId(email, cartId);
-	  
+
 		if (cart == null) {
-		 throw new ResourceNotFoundException("Cart", "cartId", cartId);
+			throw new ResourceNotFoundException("Cart", "cartId", cartId);
 		}
-	  
+
 		Order order = new Order();
-	  
+
 		order.setEmail(email);
 		order.setOrderDate(LocalDate.now());
-	  
+
+		double totalAmount = cart.getTotalPrice();
 		if (couponCode != null && !couponCode.isEmpty()) {
-		 Coupon coupon = couponRepo.findByCode(couponCode);
-	  
-		 System.out.println(couponCode);
-	  
-		 if (coupon == null || coupon.isActive()){
-		  throw new APIException("Coupon is invalid");
-		 }
-	  
-		 order.applyCoupon(coupon);
-		} else {
-		 order.setTotalAmount(cart.getTotalPrice());
+			Coupon coupon = couponRepo.findByCode(couponCode);
+
+			System.out.println(couponCode);
+
+			if (coupon == null || coupon.isActive()) {
+				throw new APIException("Coupon is invalid");
+			}
+
+			double discount = coupon.getDiscount();
+			totalAmount -= totalAmount * discount / 100;
 		}
-	  
+
+		order.setTotalAmount(totalAmount);
 		order.setOrderStatus("Order Accepted !");
-		
-	  
+
 		Payment payment = new Payment();
 		payment.setOrder(order);
 		payment.setPaymentMethod(paymentMethod);
-	  
-	  
+
 		payment = paymentRepo.save(payment);
-	  
+
 		order.setPayment(payment);
-	  
+
 		Order savedOrder = orderRepo.save(order);
-	  
+
 		List<CartItem> cartItems = cart.getCartItems();
-	  
+
 		if (cartItems.size() == 0) {
-		 throw new APIException("Cart is empty");
+			throw new APIException("Cart is empty");
 		}
-	  
+
 		List<OrderItem> orderItems = new ArrayList<>();
-	  
+
 		for (CartItem cartItem : cartItems) {
-		 OrderItem orderItem = new OrderItem();
-	  
-		 orderItem.setProduct(cartItem.getProduct());
-		 orderItem.setQuantity(cartItem.getQuantity());
-		 orderItem.setDiscount(cartItem.getDiscount());
-		 orderItem.setOrderedProductPrice(cartItem.getProductPrice());
-		 orderItem.setOrder(savedOrder);
-	  
-		 orderItems.add(orderItem);
+			OrderItem orderItem = new OrderItem();
+
+			orderItem.setProduct(cartItem.getProduct());
+			orderItem.setQuantity(cartItem.getQuantity());
+			orderItem.setDiscount(cartItem.getDiscount());
+			orderItem.setOrderedProductPrice(cartItem.getProductPrice());
+			orderItem.setOrder(savedOrder);
+
+			orderItems.add(orderItem);
 		}
-	  
+
 		orderItems = orderItemRepo.saveAll(orderItems);
-	  
+
 		cart.getCartItems().forEach(item -> {
-		 int quantity = item.getQuantity();
-	  
-		 Product product = item.getProduct();
-	  
-		 cartService.deleteProductFromCart(cartId, item.getProduct().getProductId());
-	  
-		 product.setQuantity(product.getQuantity() - quantity);
+			int quantity = item.getQuantity();
+
+			Product product = item.getProduct();
+
+			cartService.deleteProductFromCart(cartId, item.getProduct().getProductId());
+
+			product.setQuantity(product.getQuantity() - quantity);
 		});
-	  
+
 		OrderDTO orderDTO = modelMapper.map(savedOrder, OrderDTO.class);
-		
+
 		orderItems.forEach(item -> orderDTO.getOrderItems().add(modelMapper.map(item, OrderItemDTO.class)));
-	  
+
 		return orderDTO;
-	   }
+	}
 
 	@Override
 	public List<OrderDTO> getOrdersByUser(String email) {
@@ -190,20 +189,20 @@ public class OrderServiceImpl implements OrderService {
 
 		List<OrderDTO> orderDTOs = orders.stream().map(order -> modelMapper.map(order, OrderDTO.class))
 				.collect(Collectors.toList());
-		
+
 		if (orderDTOs.size() == 0) {
 			throw new APIException("No orders placed yet by the users");
 		}
 
 		OrderResponse orderResponse = new OrderResponse();
-		
+
 		orderResponse.setContent(orderDTOs);
 		orderResponse.setPageNumber(pageOrders.getNumber());
 		orderResponse.setPageSize(pageOrders.getSize());
 		orderResponse.setTotalElements(pageOrders.getTotalElements());
 		orderResponse.setTotalPages(pageOrders.getTotalPages());
 		orderResponse.setLastPage(pageOrders.isLast());
-		
+
 		return orderResponse;
 	}
 
