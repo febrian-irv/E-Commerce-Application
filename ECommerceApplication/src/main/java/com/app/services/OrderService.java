@@ -6,8 +6,6 @@ import com.app.payloads.OrderDTO;
 import com.app.payloads.OrderResponse;
 
 public interface OrderService {
-	
-	OrderDTO placeOrder(String email, Long cartId, String paymentMethod);
 
 	OrderDTO placeOrder(String email, Long cartId, String paymentMethod, String coupon);
 	

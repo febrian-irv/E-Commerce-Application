@@ -8,6 +8,7 @@ public class AppConstants {
 	public static final String SORT_PRODUCTS_BY = "productId";
 	public static final String SORT_USERS_BY = "userId";
 	public static final String SORT_ORDERS_BY = "totalAmount";
+	public  static  final  String SORT_COUPONS_BY = "id";
 	public static final String SORT_DIR = "asc";
 	public static final Long ADMIN_ID = 101L;
 	public static final Long USER_ID = 102L;

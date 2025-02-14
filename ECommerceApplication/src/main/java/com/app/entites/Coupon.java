@@ -27,7 +27,7 @@ public class Coupon {
     private Long id;
     private String code;
     private double discount;
-    private boolean active;
+    private boolean active = false;
 
     public boolean isValid() {
         return active;

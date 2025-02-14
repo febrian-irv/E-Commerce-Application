@@ -30,10 +30,8 @@ public class OrderController {
 	
 	@PostMapping("/public/users/{email}/carts/{cartId}/payments/{paymentMethod}/order")
 	public ResponseEntity<OrderDTO> orderProducts(@PathVariable String email, @PathVariable Long cartId, @PathVariable String paymentMethod, @RequestParam(name = "coupon", required = false) String coupon) {
-		if (coupon != null) {
-			OrderDTO order = orderService.placeOrder(email, cartId, paymentMethod, coupon);
-		}
-		OrderDTO order = orderService.placeOrder(email, cartId, paymentMethod);
+
+		OrderDTO order = orderService.placeOrder(email, cartId, paymentMethod, coupon);
 		
 		return new ResponseEntity<OrderDTO>(order, HttpStatus.CREATED);
 	}
