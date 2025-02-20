@@ -11,5 +11,6 @@ import lombok.NoArgsConstructor;
 public class MemberDTO {
 
     private Long memberId;
-    private double balance = 0.0;
+    private double credit = 0.0;
+    private String email;
 }

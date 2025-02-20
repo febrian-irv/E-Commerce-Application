@@ -25,4 +25,12 @@ public class MemberController {
 
         return new ResponseEntity<MemberDTO>(memberDTO, HttpStatus.CREATED);
     }
+
+    @GetMapping("/public/member/{memberId}")
+    public ResponseEntity<MemberDTO> getMember(@PathVariable Long memberId){
+
+        MemberDTO memberDTO = memberService.getMember(memberId);
+
+        return new ResponseEntity<MemberDTO>(memberDTO, HttpStatus.FOUND);
+    }
 }

@@ -35,8 +35,23 @@ public class MemberServiceImpl implements MemberService{
         newMember.setUser(user);
         newMember = memberRepo.save(newMember);
 
+        user.setMember(newMember);
+        userRepo.save(user);
+
         return modelMapper.map(newMember, MemberDTO.class);
 
+    }
+
+    @Override
+    public MemberDTO getMember(Long memberId){
+        Member member = memberRepo.findById(memberId)
+                .orElseThrow(() -> new ResourceNotFoundException("Member", "memberId", memberId));
+
+        MemberDTO memberDTO = modelMapper.map(member, MemberDTO.class);
+
+        memberDTO.setEmail(member.getUser().getEmail());
+
+        return memberDTO;
     }
 
 
