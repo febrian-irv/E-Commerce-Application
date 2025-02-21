@@ -11,9 +11,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.app.config.AppConstants;
+import com.app.exceptions.APIException;
+import com.app.payloads.AddressDTO;
 import com.app.payloads.OrderDTO;
 import com.app.payloads.OrderResponse;
 import com.app.services.OrderService;
@@ -24,22 +27,32 @@ import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 @RequestMapping("/api")
 @SecurityRequirement(name = "E-Commerce Application")
 public class OrderController {
-	
+
 	@Autowired
 	public OrderService orderService;
-	
+
 	@PostMapping("/public/users/{email}/carts/{cartId}/payments/{paymentMethod}/order")
 	public ResponseEntity<OrderDTO> orderProducts(
-		@PathVariable String email,
-		 @PathVariable Long cartId, 
-		 @PathVariable String paymentMethod, 
-		 @RequestParam(name = "coupon", required = false) String coupon,
-		 @RequestParam(name = "membership", required = false, defaultValue = "false") boolean membership
-		 ) {
+			@PathVariable String email,
+			@PathVariable Long cartId,
+			@PathVariable String paymentMethod,
+			@RequestParam(name = "coupon", required = false) String coupon,
+			@RequestParam(name = "membership", required = false, defaultValue = "false") boolean membership,
+			@RequestBody(required = false) AddressDTO addressDTO 
+	) {
+		if ("COD".equalsIgnoreCase(paymentMethod) && addressDTO == null) {
+			throw new APIException("Address is required for Cash on Delivery (COD) orders.");
+		}
 
-		OrderDTO order = orderService.placeOrder(email, cartId, paymentMethod, coupon, membership);
-		
-		return new ResponseEntity<OrderDTO>(order, HttpStatus.CREATED);
+		OrderDTO order;
+
+		if ("COD".equalsIgnoreCase(paymentMethod)) {
+			order = orderService.placeOrder(email, cartId, paymentMethod, coupon, membership, addressDTO);
+		} else {
+			order = orderService.placeOrder(email, cartId, paymentMethod, coupon, membership);
+		}
+
+		return new ResponseEntity<>(order, HttpStatus.CREATED);
 	}
 
 	@GetMapping("/admin/orders")
@@ -48,30 +61,31 @@ public class OrderController {
 			@RequestParam(name = "pageSize", defaultValue = AppConstants.PAGE_SIZE, required = false) Integer pageSize,
 			@RequestParam(name = "sortBy", defaultValue = AppConstants.SORT_ORDERS_BY, required = false) String sortBy,
 			@RequestParam(name = "sortOrder", defaultValue = AppConstants.SORT_DIR, required = false) String sortOrder) {
-		
+
 		OrderResponse orderResponse = orderService.getAllOrders(pageNumber, pageSize, sortBy, sortOrder);
 
 		return new ResponseEntity<OrderResponse>(orderResponse, HttpStatus.FOUND);
 	}
-	
+
 	@GetMapping("public/users/{email}/orders")
 	public ResponseEntity<List<OrderDTO>> getOrdersByUser(@PathVariable String email) {
 		List<OrderDTO> orders = orderService.getOrdersByUser(email);
-		
+
 		return new ResponseEntity<List<OrderDTO>>(orders, HttpStatus.FOUND);
 	}
-	
+
 	@GetMapping("public/users/{email}/orders/{orderId}")
 	public ResponseEntity<OrderDTO> getOrderByUser(@PathVariable String email, @PathVariable Long orderId) {
 		OrderDTO order = orderService.getOrder(email, orderId);
-		
+
 		return new ResponseEntity<OrderDTO>(order, HttpStatus.FOUND);
 	}
-	
+
 	@PutMapping("admin/users/{email}/orders/{orderId}/orderStatus/{orderStatus}")
-	public ResponseEntity<OrderDTO> updateOrderByUser(@PathVariable String email, @PathVariable Long orderId, @PathVariable String orderStatus) {
+	public ResponseEntity<OrderDTO> updateOrderByUser(@PathVariable String email, @PathVariable Long orderId,
+			@PathVariable String orderStatus) {
 		OrderDTO order = orderService.updateOrder(email, orderId, orderStatus);
-		
+
 		return new ResponseEntity<OrderDTO>(order, HttpStatus.OK);
 	}
 

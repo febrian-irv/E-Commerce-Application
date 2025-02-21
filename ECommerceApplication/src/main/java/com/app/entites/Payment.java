@@ -1,5 +1,7 @@
 package com.app.entites;
 
+import com.app.config.AppConstants;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -8,6 +10,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -28,7 +31,7 @@ public class Payment {
 	private Order order;
 
 	@NotBlank
-	@Size(min = 4, message = "Payment method must contain atleast 4 characters")
+	@Pattern(regexp = "(?i)" + AppConstants.METHOD_COD, message = "Only 'cod' payment method is allowed")
 	private String paymentMethod;
 
 }

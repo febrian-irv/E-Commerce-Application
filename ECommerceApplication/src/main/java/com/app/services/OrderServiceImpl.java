@@ -13,6 +13,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
+import com.app.config.AppConstants;
+import com.app.entites.Address;
 import com.app.entites.Cart;
 import com.app.entites.CartItem;
 import com.app.entites.Coupon;
@@ -23,9 +25,11 @@ import com.app.entites.Product;
 import com.app.entites.Member;
 import com.app.exceptions.APIException;
 import com.app.exceptions.ResourceNotFoundException;
+import com.app.payloads.AddressDTO;
 import com.app.payloads.OrderDTO;
 import com.app.payloads.OrderItemDTO;
 import com.app.payloads.OrderResponse;
+import com.app.repositories.AddressRepo;
 import com.app.repositories.CartItemRepo;
 import com.app.repositories.CartRepo;
 import com.app.repositories.CouponRepo;
@@ -60,6 +64,9 @@ public class OrderServiceImpl implements OrderService {
 	public CartItemRepo cartItemRepo;
 
 	@Autowired
+	private AddressRepo addressRepo;
+
+	@Autowired
 	public UserService userService;
 
 	@Autowired
@@ -75,7 +82,19 @@ public class OrderServiceImpl implements OrderService {
 	public MemberRepo memberRepo;
 
 	@Override
-	public OrderDTO placeOrder(String email, Long cartId, String paymentMethod, String couponCode, boolean membership) {
+    public OrderDTO placeOrder(String email, Long cartId, String paymentMethod, String coupon, boolean membership) {
+        return processOrder(email, cartId, paymentMethod, coupon, membership, null);
+    }
+
+    @Override
+    public OrderDTO placeOrder(String email, Long cartId, String paymentMethod, String coupon, boolean membership, AddressDTO addressDTO) {
+        if (paymentMethod.equalsIgnoreCase("COD") && addressDTO == null) {
+            throw new APIException("Address is required for Cash on Delivery (COD).");
+        }
+        return processOrder(email, cartId, paymentMethod, coupon, membership, addressDTO);
+    }
+
+	public OrderDTO processOrder(String email, Long cartId, String paymentMethod, String couponCode, boolean membership, AddressDTO addressDTO) {
 
 		Long userId = userRepo.findUserIdByEmail(email);
 		if (userId == null) {
@@ -131,7 +150,13 @@ public class OrderServiceImpl implements OrderService {
 			memberRepo.save(member);
 		}
 	
-
+		
+		if (addressDTO != null) {
+			Address shippingAddress = modelMapper.map(addressDTO, Address.class);
+			shippingAddress = addressRepo.save(shippingAddress);
+			order.setShippingAddress(shippingAddress);
+		}
+		
 		order.setTotalAmount(totalAmount);
 		order.setOrderStatus("Order Accepted !");
 
