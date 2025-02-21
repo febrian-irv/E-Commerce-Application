@@ -1,7 +1,6 @@
 package com.app.services;
 
 import com.app.entites.Member;
-import com.app.entites.Order;
 import com.app.entites.User;
 import com.app.exceptions.APIException;
 import com.app.exceptions.ResourceNotFoundException;

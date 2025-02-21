@@ -4,7 +4,6 @@ import com.app.config.AppConstants;
 import com.app.entites.User;
 import com.app.payloads.MemberDTO;
 import com.app.payloads.MemberResponse;
-import com.app.payloads.UserResponse;
 import com.app.services.MemberService;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.springframework.beans.factory.annotation.Autowired;

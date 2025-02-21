@@ -13,7 +13,6 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
-import com.app.config.AppConstants;
 import com.app.entites.Address;
 import com.app.entites.Cart;
 import com.app.entites.CartItem;
