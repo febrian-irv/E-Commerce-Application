@@ -10,6 +10,7 @@ public class AppConstants {
 	public static final String SORT_ORDERS_BY = "totalAmount";
 	public  static  final  String SORT_COUPONS_BY = "id";
 	public static final String SORT_DIR = "asc";
+	public static final String SORT_MEMBERS_BY = "memberId";
 	public static final Long ADMIN_ID = 101L;
 	public static final Long USER_ID = 102L;
 	public static final long JWT_TOKEN_VALIDITY = 5 * 60 * 60;

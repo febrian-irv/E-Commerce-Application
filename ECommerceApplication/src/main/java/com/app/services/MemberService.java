@@ -9,7 +9,7 @@ public interface MemberService {
 
     MemberDTO getMember(Long memberId);
 //
-//    MemberResponse getAllMembers(Integer pageNumber, Integer pageSize, String sortBy, String sortOrder);
+    MemberResponse getAllMembers(Integer pageNumber, Integer pageSize, String sortBy, String sortOrder);
 
 
 }

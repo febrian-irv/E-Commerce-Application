@@ -1,7 +1,10 @@
 package com.app.controllers;
 
+import com.app.config.AppConstants;
 import com.app.entites.User;
 import com.app.payloads.MemberDTO;
+import com.app.payloads.MemberResponse;
+import com.app.payloads.UserResponse;
 import com.app.services.MemberService;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,5 +35,18 @@ public class MemberController {
         MemberDTO memberDTO = memberService.getMember(memberId);
 
         return new ResponseEntity<MemberDTO>(memberDTO, HttpStatus.FOUND);
+    }
+
+    @GetMapping("/admin/members")
+    public ResponseEntity<MemberResponse> getAllMembers(
+            @RequestParam(name = "pageNumber", defaultValue = AppConstants.PAGE_NUMBER, required = false) Integer pageNumber,
+            @RequestParam(name = "pageSize", defaultValue = AppConstants.PAGE_SIZE, required = false) Integer pageSize,
+            @RequestParam(name = "sortBy", defaultValue = AppConstants.SORT_MEMBERS_BY, required = false) String sortBy,
+            @RequestParam(name = "sortOrder", defaultValue = AppConstants.SORT_DIR, required = false) String sortOrder) {
+
+
+        MemberResponse memberResponse = memberService.getAllMembers(pageNumber, pageSize, sortBy, sortOrder);
+
+        return new ResponseEntity<MemberResponse>(memberResponse, HttpStatus.FOUND);
     }
 }

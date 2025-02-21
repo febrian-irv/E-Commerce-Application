@@ -22,6 +22,6 @@ public class Member {
     @JoinColumn(name = "user_id")
     private User user;
 
-    private double credit;
+    private double balance;
 
 }
