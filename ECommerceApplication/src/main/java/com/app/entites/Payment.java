@@ -1,6 +1,5 @@
 package com.app.entites;
 
-import com.app.config.AppConstants;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
@@ -10,7 +9,6 @@ import jakarta.persistence.Id;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Pattern;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -30,7 +28,6 @@ public class Payment {
 	private Order order;
 
 	@NotBlank
-	@Pattern(regexp = "(?i)" + AppConstants.METHOD_COD, message = "Only 'cod' payment method is allowed")
 	private String paymentMethod;
 
 }

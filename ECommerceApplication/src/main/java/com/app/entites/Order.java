@@ -38,7 +38,7 @@ public class Order {
 	private List<OrderItem> orderItems = new ArrayList<>();
 
 	@OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
-	@JoinColumn(name = "address_id", referencedColumnName = "addressId", nullable = false)
+	@JoinColumn(name = "address_id", referencedColumnName = "addressId", nullable = true)
 	private Address shippingAddress;
 
 	private LocalDate orderDate;
