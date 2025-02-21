@@ -20,6 +20,7 @@ import com.app.entites.Order;
 import com.app.entites.OrderItem;
 import com.app.entites.Payment;
 import com.app.entites.Product;
+import com.app.entites.Member;
 import com.app.exceptions.APIException;
 import com.app.exceptions.ResourceNotFoundException;
 import com.app.payloads.OrderDTO;
@@ -32,6 +33,7 @@ import com.app.repositories.OrderItemRepo;
 import com.app.repositories.OrderRepo;
 import com.app.repositories.PaymentRepo;
 import com.app.repositories.UserRepo;
+import com.app.repositories.MemberRepo;
 
 import jakarta.transaction.Transactional;
 
@@ -69,8 +71,24 @@ public class OrderServiceImpl implements OrderService {
 	@Autowired
 	public CouponRepo couponRepo;
 
+	@Autowired
+	public MemberRepo memberRepo;
+
 	@Override
-	public OrderDTO placeOrder(String email, Long cartId, String paymentMethod, String couponCode) {
+	public OrderDTO placeOrder(String email, Long cartId, String paymentMethod, String couponCode, boolean membership) {
+
+		Long userId = userRepo.findUserIdByEmail(email);
+		if (userId == null) {
+			throw new ResourceNotFoundException("User", "email", email);
+		}
+
+		Member member = memberRepo.findByUserId(userId);
+		boolean isMember = (member != null);
+		double memberBalance = isMember ? member.getBalance() : 0.0;
+
+		if (membership && !isMember) {
+			throw new APIException("User is not a member. Please subscribe to membership first.");
+		}
 
 		Cart cart = cartRepo.findCartByEmailAndCartId(email, cartId);
 
@@ -96,6 +114,23 @@ public class OrderServiceImpl implements OrderService {
 			double discount = coupon.getDiscount();
 			totalAmount -= totalAmount * discount / 100;
 		}
+
+		if (membership) {
+			if (memberBalance > totalAmount) {
+				member.setBalance(memberBalance-totalAmount);
+				totalAmount = 0.0;
+			} else {
+				totalAmount -= memberBalance;
+				member.setBalance(0.0); 
+			}
+			memberRepo.save(member);
+		} 
+		else if (isMember) {
+			double cashback = totalAmount * 0.01;
+			member.setBalance(memberBalance + cashback);
+			memberRepo.save(member);
+		}
+	
 
 		order.setTotalAmount(totalAmount);
 		order.setOrderStatus("Order Accepted !");
@@ -145,6 +180,8 @@ public class OrderServiceImpl implements OrderService {
 		OrderDTO orderDTO = modelMapper.map(savedOrder, OrderDTO.class);
 
 		orderItems.forEach(item -> orderDTO.getOrderItems().add(modelMapper.map(item, OrderItemDTO.class)));
+
+
 
 		return orderDTO;
 	}
